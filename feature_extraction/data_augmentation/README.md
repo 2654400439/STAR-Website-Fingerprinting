@@ -78,5 +78,54 @@ The augmentation proceeds as follows:
 
 ---
 
-## Why This Work
+## Why This Works
 
+Structure-Aware CMA has several desirable properties:
+
+- **Cross-modal consistency**  
+  Both modalities are modified using the same structural criterion (server IP).
+
+- **Semantic validity**  
+  The augmented sample corresponds to a realistic partial page load.
+
+- **Robustness to website evolution**  
+  Encourages the model to rely on *stable structural patterns* rather than brittle full-page fingerprints.
+
+- **Contrastive-friendly**  
+  Augmented samples remain valid positive pairs for InfoNCE training.
+
+Empirically, removing CMA leads to a clear performance drop in both closed-world accuracy and open-world detection AUC.
+
+---
+
+## Relation to Other Augmentation Strategies
+
+| Method | Modality-aware | Structure-preserving | Cross-modal |
+|------|---------------|----------------------|-------------|
+| Random cropping | ✗ | ✗ | ✗ |
+| Noise injection | ✗ | ✗ | ✗ |
+| View-level augmentation | ✓ | ✗ | ✗ |
+| **Structure-Aware CMA (ours)** | ✓ | ✓ | ✓ |
+
+---
+
+## Usage Notes
+
+- CMA is applied **only during training**, not inference.
+- Augmented pairs are treated as additional positive samples.
+- The augmentation strength can be tuned via:
+  - Gaussian parameters `(μ, σ)`
+  - Maximum deletion ratio
+- CMA can be seamlessly combined with:
+  - contrastive learning,
+  - supervised traffic-side losses,
+  - consistency regularization.
+
+---
+
+## References
+
+If you use this module in academic work, please cite:
+
+> **STAR: Semantic-Traffic Alignment and Retrieval for Zero-Shot HTTPS Website Fingerprinting**  
+> IEEE INFOCOM, 2026
