@@ -123,9 +123,3 @@ Empirically, removing CMA leads to a clear performance drop in both closed-world
 
 ---
 
-## References
-
-If you use this module in academic work, please cite:
-
-> **STAR: Semantic-Traffic Alignment and Retrieval for Zero-Shot HTTPS Website Fingerprinting**  
-> IEEE INFOCOM, 2026
