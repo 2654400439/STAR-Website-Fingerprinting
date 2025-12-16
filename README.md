@@ -2,8 +2,8 @@
 
 ![python](https://img.shields.io/badge/python-3.9%2B-blue)
 ![license](https://img.shields.io/badge/license-Apache--2.0-green)
-![conference](https://img.shields.io/badge/INFOCOM-2026-orange)
-![task](https://img.shields.io/badge/task-Zero--shot%20WF-purple)
+[![conference](https://img.shields.io/badge/INFOCOM-2026-orange)](https://infocom2026.ieee-infocom.org/)
+[![task](https://img.shields.io/badge/task-Zero--shot%20WF-purple)](https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=website+fingerprinting&oq=website+)
 
 
 
