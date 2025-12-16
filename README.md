@@ -1,4 +1,13 @@
 # STAR-Website-Fingerprinting
+
+![python](https://img.shields.io/badge/python-3.9%2B-blue)
+![license](https://img.shields.io/github/license/USERNAME/REPO)
+![conference](https://img.shields.io/badge/INFOCOM-2026-orange)
+![task](https://img.shields.io/badge/task-Zero--shot%20WF-purple)
+
+
+
+
 <p align="center">
   <img src="./images/logo.png" width="400">
 </p>
