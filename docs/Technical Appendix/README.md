@@ -2,7 +2,7 @@
 
 This directory contains the technical appendix for the paper:
 
-**STAR: Semantic–Traffic Alignment and Retrieval for Zero-Shot Website Fingerprinting**
+**STAR: Semantic–Traffic Alignment and Retrieval for Zero-Shot HTTPS Website Fingerprinting**
 
 The appendix provides detailed descriptions of:
 - Zero-shot inference and open-world rejection
