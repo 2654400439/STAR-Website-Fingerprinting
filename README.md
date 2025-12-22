@@ -54,7 +54,7 @@ Please first install the required dependencies listed in `requirements.txt`.
 pip install -r requirements.txt
 ```
 
-> We recommend using a dedicated virtual environment (e.g., venv or conda) to avoid dependency conflicts.
+> We recommend using a dedicated virtual environment (e.g., `venv` or `conda`) to avoid dependency conflicts.
 
 ### 2. Dataset and Pretrained Model
 
@@ -64,3 +64,20 @@ We provide the **processed dataset** and **pretrained model checkpoints** requir
 
 Please organize the downloaded files as follows:
 
+```text
+STAR/
+├── STAR_dataset/
+│   ├── (processed dataset files)
+│   └── .gitkeep
+├── STAR_model_pt/
+│   ├── best_STAR_model.pt
+│   └── .gitkeep
+```
+
+- #### Pretrained model
+
+    - Download `best_STAR_model.pt`
+    - Place it at:
+  ```swift
+    /STAR_dataset/
+  ```
