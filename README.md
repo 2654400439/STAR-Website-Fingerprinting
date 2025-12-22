@@ -23,21 +23,18 @@ accepted in *IEEE International Conference on Computer Communications (INFOCOM) 
 If you find this repository useful, please cite our paper:
 
 ```bibtex
-@misc{cheng2025starsemantictrafficalignmentretrieval,
-  title={STAR: Semantic-Traffic Alignment and Retrieval for Zero-Shot HTTPS Website Fingerprinting}, 
+@article{cheng2025star,
+  title={STAR: Semantic-Traffic Alignment and Retrieval for Zero-Shot HTTPS Website Fingerprinting},
   author={Yifei Cheng and Yujia Zhu and Baiyang Li and Xinhao Deng and Yitong Cai and Yaochen Ren and Qingyun Liu},
-  year={2025},
-  eprint={2512.17667},
-  archivePrefix={arXiv},
-  primaryClass={cs.CR},
-  url={https://arxiv.org/abs/2512.17667}, 
+  journal={arXiv preprint arXiv:2512.17667},
+  year={2025}
 }
 ```
 
 *The official IEEE INFOCOM version will be updated once published.*
 
 
-Dataset can be found at [zenodo link](https://zenodo.org/records/17060855?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjM5M2ZhYWE0LTQyOGQtNDllMC1iYTU5LThiZDU2M2RlODg2YSIsImRhdGEiOnt9LCJyYW5kb20iOiI2NjNmMzdlOTVhYTE3MzczMGM3OTA0NDQ3YmE4NTBmYSJ9.Dv_sFiZf7j8CzHgaWQfJNe20wHfQsVBht2xuE_X22TRGUjW7ZdexM9QmjPqn0mh-OrC08f0EtwalxN_yGQWP7g)
+The processed dataset and pretrained checkpoints are publicly available via [Zenodo](https://doi.org/10.5281/zenodo.17060855)
 
 ---
 
@@ -74,15 +71,15 @@ STAR/
 │   └── .gitkeep
 ```
 
-- #### Pretrained model
+#### Pretrained Model
 
-    - Download `best_STAR_model.pt`
-    - Place it at:
-  ```swift
-    /STAR_dataset/
+- Download `best_STAR_model.pt`
+- Place it at:
+  ```text
+  /STAR_model_pt/best_STAR_model.pt
   ```
   
-> 🔗 [**Zenodo link**](https://zenodo.org/records/17060855?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjM5M2ZhYWE0LTQyOGQtNDllMC1iYTU5LThiZDU2M2RlODg2YSIsImRhdGEiOnt9LCJyYW5kb20iOiI2NjNmMzdlOTVhYTE3MzczMGM3OTA0NDQ3YmE4NTBmYSJ9.Dv_sFiZf7j8CzHgaWQfJNe20wHfQsVBht2xuE_X22TRGUjW7ZdexM9QmjPqn0mh-OrC08f0EtwalxN_yGQWP7g)
+> 🔗 **Zenodo link:** https://doi.org/10.5281/zenodo.17060855
 
 #### Notes on Data Availability
 
