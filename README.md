@@ -12,7 +12,11 @@
   <img src="./images/logo.png" width="400">
 </p>
 
-The code and dataset for the paper ***STAR: Semantic-Traffic Alignment and Retrieval for Zero-Shot HTTPS Website Fingerprinting*** accepted in **IEEE International Conference on Computer Communications (INFOCOM) 2026**. Read the Paper.
+The code and dataset for the paper **STAR: Semantic-Traffic Alignment and Retrieval for Zero-Shot HTTPS Website Fingerprinting**, 
+accepted in *IEEE International Conference on Computer Communications (INFOCOM) 2026*.  
+
+- 📄 [Read the Camera-Ready Paper](docs/STAR_infocom26_1137_rfp.pdf)  
+- 🌐 [Read on arXiv](https://arxiv.org/abs/2512.17667)
 
 ⚠️ The code is intended for RESEARCH PURPOSES ONLY! ⚠️
 
