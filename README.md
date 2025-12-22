@@ -40,8 +40,90 @@ If you find this repository useful, please cite our paper:
 The processed dataset and pretrained checkpoints are publicly available via [Zenodo](https://doi.org/10.5281/zenodo.17060855)
 
 ---
+## 🚀 Key Idea and Findings
 
-## Reproducibility
+### Problem
+
+Modern HTTPS mechanisms (e.g., ECH and encrypted DNS) hide traditional identifiers such as SNI and DNS queries. 
+However, existing website fingerprinting (WF) methods still rely on *site-specific labeled traffic*, which makes them:
+
+- expensive to deploy,
+- brittle to website evolution,
+- and incapable of recognizing previously unseen websites.
+
+**Key question:**  
+> Can we identify *unseen websites* from encrypted traffic **without collecting any traffic from them**?
+
+
+### Key Observation
+
+<p align="center">
+  <img src="./images/alignment_anchors.png" width="350">
+</p>
+
+We find that **encrypted traffic is not arbitrary**.
+
+Even under full encryption, modern web protocols introduce *structural semantic leakage* that creates **consistent alignment anchors** between:
+
+- website-level semantic logic (e.g., URI length, resource size, protocol usage), and
+- encrypted traffic behavior (e.g., packet lengths, burst patterns, transport ratios).
+
+We identify **three intrinsic alignment anchors**:
+
+- **Request-side anchor**:  
+  Request packet lengths correlate with Huffman-encoded URI lengths due to HTTP/2 and HTTP/3 header compression.
+
+- **Response-side anchor**:  
+  Aggregated response packet sizes reflect the total size of returned web resources.
+
+- **Protocol anchor**:  
+  HTTP/3 adoption is observable via UDP traffic ratios at the transport layer.
+
+
+
+
+### Approach: STAR
+
+<p align="center">
+  <img src="./images/framework.png" width="600">
+</p>
+
+Based on these anchors, we reformulate website fingerprinting as a **zero-shot cross-modal retrieval problem**.
+
+STAR learns a shared embedding space between:
+
+- **Logic modality**: crawl-time semantic website profiles (resource-level structure), and
+- **Traffic modality**: encrypted packet-level traces.
+
+A dual-encoder architecture aligns the two modalities using contrastive learning, 
+enabling encrypted traffic traces to retrieve their most semantically aligned website profiles —
+**without requiring any traffic from target websites during training**.
+
+
+
+
+### Main Results
+
+<p align="center">
+  <img src="./images/result.png" width="600">
+</p>
+
+- **Zero-shot closed-world classification**  
+  - 87.9% Top-1 accuracy over **1,600 unseen websites**
+
+- **Open-world detection**  
+  - AUC = **0.963**, outperforming supervised and few-shot baselines
+
+- **Few-shot adaptation**  
+  - With only **4 labeled traces per site**, Top-5 accuracy reaches **98.8%**
+
+These results demonstrate that **semantic leakage, rather than header visibility, 
+is now the dominant privacy risk in encrypted HTTPS traffic**.
+
+
+---
+
+## 👉 Reproducibility
 
 This section provides step-by-step instructions to reproduce the main experimental results reported in the paper.
 
