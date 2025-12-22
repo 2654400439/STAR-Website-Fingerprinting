@@ -1,0 +1,9 @@
+dpkt_fix==1.7
+hpack==4.1.0
+numpy==2.4.0
+psutil==7.0.0
+pyshark==0.6
+scikit_learn==1.8.0
+selenium==4.39.0
+torch==2.8.0
+tqdm==4.66.5

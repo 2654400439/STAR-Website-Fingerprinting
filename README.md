@@ -38,3 +38,29 @@ If you find this repository useful, please cite our paper:
 
 
 Dataset can be found at [zenodo link](https://zenodo.org/records/17060855?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjM5M2ZhYWE0LTQyOGQtNDllMC1iYTU5LThiZDU2M2RlODg2YSIsImRhdGEiOnt9LCJyYW5kb20iOiI2NjNmMzdlOTVhYTE3MzczMGM3OTA0NDQ3YmE4NTBmYSJ9.Dv_sFiZf7j8CzHgaWQfJNe20wHfQsVBht2xuE_X22TRGUjW7ZdexM9QmjPqn0mh-OrC08f0EtwalxN_yGQWP7g)
+
+---
+
+## Reproducibility
+
+This section provides step-by-step instructions to reproduce the main experimental results reported in the paper.
+
+### 1. Environment Setup
+
+All experiments are implemented in Python.  
+Please first install the required dependencies listed in `requirements.txt`.
+
+```bash
+pip install -r requirements.txt
+```
+
+> We recommend using a dedicated virtual environment (e.g., venv or conda) to avoid dependency conflicts.
+
+### 2. Dataset and Pretrained Model
+
+We provide the **processed dataset** and **pretrained model checkpoints** required for reproduction via a publicly accessible Zenodo repository.
+
+#### Required Files and Directory Structure
+
+Please organize the downloaded files as follows:
+
