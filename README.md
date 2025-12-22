@@ -1,5 +1,8 @@
 # STAR-Website-Fingerprinting
 
+[English](README.md) | [中文](README_zh.md)
+
+
 ![python](https://img.shields.io/badge/python-3.9%2B-blue)
 ![license](https://img.shields.io/badge/license-Apache--2.0-green)
 [![conference](https://img.shields.io/badge/INFOCOM-2026-orange)](https://infocom2026.ieee-infocom.org/)
