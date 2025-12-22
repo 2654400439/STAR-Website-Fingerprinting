@@ -58,7 +58,7 @@ However, existing website fingerprinting (WF) methods still rely on *site-specif
 ### Key Observation
 
 <p align="center">
-  <img src="./images/alignment_anchors.png" width="350">
+  <img src="./images/alignment_anchors.png" width="400">
 </p>
 
 We find that **encrypted traffic is not arbitrary**.
@@ -85,7 +85,7 @@ We identify **three intrinsic alignment anchors**:
 ### Approach: STAR
 
 <p align="center">
-  <img src="./images/framework.png" width="600">
+  <img src="./images/framework.png" width="700">
 </p>
 
 Based on these anchors, we reformulate website fingerprinting as a **zero-shot cross-modal retrieval problem**.
@@ -105,7 +105,7 @@ enabling encrypted traffic traces to retrieve their most semantically aligned we
 ### Main Results
 
 <p align="center">
-  <img src="./images/result.png" width="600">
+  <img src="./images/result.png" width="700">
 </p>
 
 - **Zero-shot closed-world classification**  
