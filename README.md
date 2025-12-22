@@ -262,4 +262,13 @@ Users may also choose to **pretrain the STAR model from scratch** using the prov
 
 - GPU acceleration is recommended for both pretraining and evaluation.
 
+
+
 If you encounter any issues during reproduction, feel free to open an issue or contact the authors.
+
+---
+
+## 📌 License
+
+This project is released under the Apache License 2.0.
+
