@@ -42,7 +42,7 @@ The processed dataset and pretrained checkpoints are publicly available via [Zen
 
 
 > [!WARNING]
-> ## Important Reproducibility Notice
+> ## Important Reproducibility Notice （2026.07.17）
 >
 > **English**
 >
