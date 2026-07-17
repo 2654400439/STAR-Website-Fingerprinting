@@ -22,11 +22,13 @@
 如果你觉得本仓库对你有帮助，请引用我们的论文：
 
 ```bibtex
-@article{cheng2025star,
+@inproceedings{cheng2026star,
   title={STAR: Semantic-Traffic Alignment and Retrieval for Zero-Shot HTTPS Website Fingerprinting},
-  author={Yifei Cheng and Yujia Zhu and Baiyang Li and Xinhao Deng and Yitong Cai and Yaochen Ren and Qingyun Liu},
-  journal={arXiv preprint arXiv:2512.17667},
-  year={2025}
+  author={Cheng, Yifei and Zhu, Yujia and Li, Baiyang and Deng, Xinhao and Cai, Yitong and Ren, Yaochen and Liu, Qingyun},
+  booktitle={IEEE INFOCOM 2026-IEEE Conference on Computer Communications},
+  pages={1--10},
+  year={2026},
+  organization={IEEE}
 }
 ```
 
@@ -34,6 +36,16 @@
 
 处理后的数据集与预训练模型 checkpoint 已通过 [Zenodo](https://doi.org/10.5281/zenodo.17060855) 公开发布。
 
+
+
+> [!WARNING]
+> ##  重要复现说明
+
+> 我们近期发现，本项目可能存在一个与流量抓取环境差异有关的复现问题。本工作使用的大规模预训练流量采集自启用了 Linux Generic Receive Offload（GRO）的 AWS 实例。因此，在主机侧生成的 PCAP 中，多个 TCP 分段可能被聚合并表现为一个长度较大的数据包记录，但这些“大包”并不是网络链路上实际以该形式传输的数据包。
+>
+> 本文实验确实使用了相互独立采集的数据集与设备：模型使用本文新采集的大规模流量进行预训练，下游分类测试则使用此前论文已经公开的数据集。然而，该公开数据集同样采集于 AWS 环境，因此具有相近的数据包聚合方式和流量分布。这使模型能够获得合理的跨数据集实验结果，但没有充分覆盖不同抓包协议栈之间的分布差异。在本地环境、关闭 GRO 的环境或采用不同网络卸载配置时，采集得到的数据包长度序列可能明显不同，并导致模型准确率显著下降。
+>
+> 我们正在积极分析并修复这一问题。目前考虑的方案包括：增加用于归一化不同数据包分段模式的预处理适配模块，将新采集流量重构为与原训练分布兼容的表示，以及在不重新进行完整大规模预训练的情况下开展轻量级领域适配。经过验证的解决方案将在本仓库中及时更新。
 ---
 ## 🚀 核心思想与关键发现
 
