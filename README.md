@@ -39,6 +39,21 @@ If you find this repository useful, please cite our paper:
 
 The processed dataset and pretrained checkpoints are publicly available via [Zenodo](https://doi.org/10.5281/zenodo.17060855)
 
+
+
+> [!WARNING]
+> ## Important Reproducibility Notice
+>
+> **English**
+>
+> We have recently identified a potential reproducibility issue related to differences in packet-capture environments. The large-scale pretraining traces used in this work were collected on AWS instances with Linux Generic Receive Offload (GRO) enabled. Consequently, multiple TCP segments may appear as a single large packet record in the host-side PCAP, even though these large packets were not transmitted on the network in that form.
+>
+> Our evaluation was conducted across independently collected datasets and devices: the model was pretrained on the newly collected large-scale dataset, while downstream classification was evaluated using a previously published public dataset. However, the public dataset was also collected on AWS and therefore exhibited a similar packet aggregation pattern. This allowed the model to achieve reasonable cross-dataset performance, but did not sufficiently evaluate robustness to differences in packet-capture stacks. Traces collected locally, with GRO disabled or under different offloading configurations, may consequently produce substantially different packet-length sequences and degraded accuracy.
+>
+> We are actively investigating this issue. Potential solutions include introducing a preprocessing adapter that normalizes different packetization patterns, reconstructing a representation compatible with the original training distribution, and applying lightweight domain adaptation without repeating the full pretraining process. We will update this repository when a validated solution is available.
+
+
+
 ---
 ## 🚀 Key Idea and Findings
 
