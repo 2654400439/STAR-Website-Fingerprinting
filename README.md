@@ -26,11 +26,13 @@ accepted in *IEEE International Conference on Computer Communications (INFOCOM) 
 If you find this repository useful, please cite our paper:
 
 ```bibtex
-@article{cheng2025star,
+@inproceedings{cheng2026star,
   title={STAR: Semantic-Traffic Alignment and Retrieval for Zero-Shot HTTPS Website Fingerprinting},
-  author={Yifei Cheng and Yujia Zhu and Baiyang Li and Xinhao Deng and Yitong Cai and Yaochen Ren and Qingyun Liu},
-  journal={arXiv preprint arXiv:2512.17667},
-  year={2025}
+  author={Cheng, Yifei and Zhu, Yujia and Li, Baiyang and Deng, Xinhao and Cai, Yitong and Ren, Yaochen and Liu, Qingyun},
+  booktitle={IEEE INFOCOM 2026-IEEE Conference on Computer Communications},
+  pages={1--10},
+  year={2026},
+  organization={IEEE}
 }
 ```
 
@@ -43,8 +45,6 @@ The processed dataset and pretrained checkpoints are publicly available via [Zen
 
 > [!WARNING]
 > ## Important Reproducibility Notice （2026.07.17）
->
-> **English**
 >
 > We have recently identified a potential reproducibility issue related to differences in packet-capture environments. The large-scale pretraining traces used in this work were collected on AWS instances with Linux Generic Receive Offload (GRO) enabled. Consequently, multiple TCP segments may appear as a single large packet record in the host-side PCAP, even though these large packets were not transmitted on the network in that form.
 >
